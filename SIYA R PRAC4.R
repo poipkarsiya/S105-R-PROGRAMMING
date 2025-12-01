@@ -1,0 +1,6 @@
+install.packages("dplyr")
+library(dplyr)
+library(readr)
+marks <- read_csv("C:/Users/itlab/OneDrive/Documents/S105/College_Marks_Dataset.csv")
+head(marks)
+high_score_subset <- subset(data, College_Marks > 600)
