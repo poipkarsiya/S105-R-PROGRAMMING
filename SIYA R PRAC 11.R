@@ -1,0 +1,5 @@
+install.packages("tidyr")
+library(tidyr)
+library(dplyr)
+spotify <- read.csv("C:/Users/itlab/OneDrive/Documents/S105/DATASET/spotify_data clean.csv")
+head(spotify)
