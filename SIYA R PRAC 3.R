@@ -1,0 +1,14 @@
+install.packages(c("readr", "psych"))
+
+library(readr)    # For efficient data reading
+library(psych)    # For descriptive statistics
+my_data <- read.csv("C:/Users/itlab/OneDrive/Documents/S105/Cleaned_BMW_Sales_Data.csv")
+head(my_data)
+tail(my_data)
+dim(my_data)
+cat("Dimensions (Rows, Columns): ", dim(my_data), "\n")
+str(my_data)
+summary(my_data)
+names(my_data)
+cat("Column Names: ", names(my_data), "\n")
+describe(my_data)
