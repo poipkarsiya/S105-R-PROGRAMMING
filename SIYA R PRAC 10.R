@@ -11,8 +11,8 @@ print("--- Cleaned Baseline Data ---")
 print(head(df_clean))
 df_calc <- df_clean %>%
   mutate(
-    Discount_Amount = Price * (Discount / 100),  # Step 1: Calc amount off
-    Final_Price = Price - Discount_Amount        # Step 2: Subtract from total
+    Discount_Amount = Price * (Discount / 100),  
+    Final_Price = Price - Discount_Amount        
   )
 print("--- Method A: Arithmetic Results (Final Price) ---")
 print(df_calc %>% select(Price, Discount, Final_Price))
@@ -44,3 +44,4 @@ final_dataset <- df_clean %>%
 
 print("--- Final Combined Dataset ---")
 print(head(final_dataset))
+
