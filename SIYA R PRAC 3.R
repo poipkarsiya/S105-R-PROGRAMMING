@@ -1,5 +1,4 @@
 install.packages(c("readr", "psych"))
-
 library(readr)   
 library(psych)    
 my_data <- read.csv("C:/Users/itlab/OneDrive/Documents/S105/Cleaned_BMW_Sales_Data.csv")
@@ -11,5 +10,5 @@ str(my_data)
 summary(my_data)
 names(my_data)
 cat("Column Names: ", names(my_data), "\n")
-
 describe(my_data)
+
