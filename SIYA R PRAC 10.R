@@ -19,7 +19,6 @@ print(df_calc %>% select(Price, Discount, Final_Price))
 df_logic <- df_clean %>%
   mutate(
     Quality_Label = ifelse(Rating > 4.0, "Top Rated", "Average"),
-    # Let's add a second logic: Is it expensive?
     Price_Category = ifelse(Price > 4000, "Premium", "Budget")
   )
 
@@ -28,8 +27,6 @@ print(df_logic %>% select(Rating, Quality_Label, Price, Price_Category))
 
 df_text <- df_clean %>%
   mutate(
-    # paste0 connects strings with no separator by default
-    # paste connects strings with a space by default
     Product_Summary = paste(Category, "item is", Stock, "at $", Price)
   )
 print("--- Method C: Text Transformation ---")
@@ -44,4 +41,5 @@ final_dataset <- df_clean %>%
 
 print("--- Final Combined Dataset ---")
 print(head(final_dataset))
+
 
