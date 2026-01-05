@@ -1,5 +1,5 @@
 install.packages("stringr")
-install.packages("tidyr") # for separating columns after splitting
+install.packages("tidyr") 
 library(stringr)
 library(tidyr)
 library(dplyr)
@@ -15,6 +15,7 @@ retail_data$Year <- str_sub(retail_data$SKU, -4, -1)
 print("--- Data after str_sub() ---")
 print(retail_data %>% select(SKU, Category_Code, Year))
 split_list <- str_split(retail_data$Description, " - ")
+
 print("--- Basic Split Output (List format) ---")
 print(split_list[[1]])
 split_matrix <- str_split(retail_data$Description, " - ", simplify = TRUE)
@@ -24,6 +25,8 @@ print("--- Data after str_split() (Manual Assignment) ---")
 print(retail_data %>% select(Description, Main_Cat, Sub_Cat))
 tidy_data <- retail_data %>%
   separate(SKU, into = c("Dept", "ID", "Mfg_Year"), sep = "-")
+
 print("--- Bonus: The 'separate' function (easier splitting) ---")
 print(tidy_data %>% select(Dept, ID, Mfg_Year))
+
 
